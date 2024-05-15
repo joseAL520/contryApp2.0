@@ -6,6 +6,7 @@ import { ByContryPageComponent } from './pages/by-contry-page/by-contry-page.com
 import { ByRegionPageComponent } from './pages/by-region-page/by-region-page.component';
 import { CountryPageComponent } from './pages/country-page/country-page.component';
 import { ContriesRoutingModule } from './countries-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -18,7 +19,8 @@ import { ContriesRoutingModule } from './countries-routing.module';
   ],
   imports: [
     CommonModule,
-    ContriesRoutingModule
+    ContriesRoutingModule,
+    SharedModule
   ]
 })
 export class CountriesModule { }
