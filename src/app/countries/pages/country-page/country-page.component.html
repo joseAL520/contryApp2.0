@@ -1,1 +1,47 @@
-<p>country-page works!</p>
+
+<ng-template #loadin>
+    <div class="alert alert-info text-center">
+        Espere Por favor
+    </div>
+</ng-template>
+
+
+
+<div *ngIf="countryPage; else loadin " >
+    <div class="row">
+        <div class="col-12">
+            <h2>Pais: <strong>{{countryPage.name.common}}</strong></h2>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <h3>
+                Bandera
+            </h3>
+            <img [src]="countryPage.flags.svg" [alt]="countryPage.name.common" class="img-thumbnail">
+        </div>
+        <div class="col">
+            <h3>Informacion</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Poblacion: </strong> {{countryPage.population | number}}
+
+                </li>
+                <li class="list-group-item">
+                    <strong>Codigo: </strong> {{countryPage.cca3 }}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col">
+            <h3>Traducciones</h3>
+            <div class="d-flex flex-wrap">
+                <span class="badge bg-primary m-1 ">{{countryPage.translations['ara']?.common}}</span>
+                <span class="badge bg-primary m-1 ">{{countryPage.translations['spa']?.common}}</span>
+            </div>
+        </div>
+    </div>
+</div>
