@@ -28,7 +28,7 @@
                 <td> {{ item.capital }}  </td>
                 <td> {{ item.population | number }} </td>
                 <td>    
-                    <a href="#"> ver mas</a>
+                    <a [routerLink]=" ['/countries/by',item.cca3] "> ver mas</a>
                 </td>
             </tr>
         </tbody>
