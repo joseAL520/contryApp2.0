@@ -1,1 +1,21 @@
-<p>by-contry-page works!</p>
+<h2>Por Pais</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!-- SearchBox -->
+        <shared-components-search-box 
+            (onValue)="searchByCountry($event)"
+            placeHolder="Buscar por Pais"
+            ></shared-components-search-box>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col">
+        <!-- table of result  -->
+        <hr>
+        <component-country-table [countries]="countryName"></component-country-table>
+    </div>
+</div>

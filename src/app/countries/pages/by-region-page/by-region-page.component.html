@@ -1,1 +1,21 @@
-<p>by-region-page works!</p>
+<h2>Por Region</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!-- SearchBox -->
+        <shared-components-search-box 
+            (onValue)="searchByRegion($event)"
+            placeHolder="Buscar por Pais"
+            ></shared-components-search-box>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col">
+        <!-- table of result  -->
+        <hr>
+        <component-country-table [countries]="byRegion"></component-country-table>
+    </div>
+</div>
