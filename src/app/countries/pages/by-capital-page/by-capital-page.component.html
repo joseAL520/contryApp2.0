@@ -16,7 +16,7 @@
     <div class="col">
         <!-- table of result  -->
         <hr>
-        <shared-loadin-components></shared-loadin-components>
+        <shared-loadin-components *ngIf="isLoadin"></shared-loadin-components>
         <component-country-table [countries]="countries"></component-country-table>
     </div>
 </div>
